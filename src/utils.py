@@ -107,12 +107,7 @@ def calcular_iva(valor_base, tasa=0.19):
         calcular_iva(1_000_000, 0.05)  -> 50000.0
         calcular_iva(0)                -> 0.0
     """
-    # TODO:
-    # 1. Multiplica valor_base por tasa y guarda el resultado en una
-    #    variable llamada iva.
-    # 2. Retorna iva.
-    pass
-
+    return valor_base*tasa
 
 def formatear_reporte_valor(nit, nombre, valor, estado):
     """
@@ -354,11 +349,11 @@ def esta_al_dia(dias_mora):
         esta_al_dia(1)   -> False
         esta_al_dia(30)  -> False
     """
-    # TODO:
-    # 1. Escribe un if/else:
-    #    - si dias_mora == 0: retorna True
-    #    - de lo contrario: retorna False
-    pass
+    
+    if dias_mora == 0:
+        return True
+    else:
+        return False
 
 
 def aplicar_descuento(valor, pago_voluntario):

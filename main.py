@@ -73,9 +73,10 @@ def menu_funciones_basicas():
     """Sección 1: funciones y procedimientos con tipos simples."""
     print("\n--- Funciones básicas ---")
 
-    # TODO: descomenta cuando hayas completado calcular_iva
-    # valor = 1_500_000
-    # iva = calcular_iva(valor)
+    valor = 1500000
+    iva = calcular_iva(valor)
+    print("El valor del IVA es",iva)
+    
     # mostrar_resultado("IVA sobre $1,500,000", iva)
 
     # TODO: descomenta cuando hayas completado formatear_reporte_valor
@@ -112,12 +113,11 @@ def menu_condicionales_simples():
     """Sección 3: condicionales simples."""
     print("\n--- Condicionales simples ---")
 
-    # TODO: descomenta cuando hayas completado esta_al_dia
-    # casos_mora = [0, 1, 30, 90]
-    # for dias in casos_mora:
-    #     al_dia = esta_al_dia(dias)
-    #     estado = "Al día" if al_dia else "En mora"
-    #     print(f"  {dias} días de mora → {estado}")
+    casos_mora = [0, 1, 30, 90]
+    for dias in casos_mora:
+        al_dia = esta_al_dia(dias)
+        estado = "Al día" if al_dia else "En mora"
+        print(f"  {dias} días de mora → {estado}")
 
     # TODO: descomenta cuando hayas completado aplicar_descuento
     # valor_base = 1_000_000
