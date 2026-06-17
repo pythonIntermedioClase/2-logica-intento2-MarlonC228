@@ -371,14 +371,12 @@ def aplicar_descuento(valor, pago_voluntario):
         aplicar_descuento(1_000_000, True)   -> 900000.0
         aplicar_descuento(1_000_000, False)  -> 1000000
     """
-    # TODO:
-    # 1. Si pago_voluntario es True:
-    #    - Calcula el descuento: descuento = valor * 0.10
-    #    - Calcula el valor final: valor_con_descuento = valor - descuento
-    #    - Retorna valor_con_descuento
-    # 2. Si pago_voluntario es False:
-    #    - Retorna valor sin modificar
-    pass
+    
+    if pago_voluntario == True:
+        descuento = valor * 0.1
+        valor_con_descuento = valor - descuento
+        return valor_con_descuento
+    return valor
 
 
 def asignar_prioridad(valor, tiene_historial_incumplimiento):
@@ -397,15 +395,15 @@ def asignar_prioridad(valor, tiene_historial_incumplimiento):
     Returns:
         str: "ALTA", "MEDIA" o "BAJA".
     """
-    # TODO:
-    # 1. Evalúa las dos condiciones por separado y guárdalas en variables:
-    #    valor_alto = valor > 1_000_000
-    #    tiene_historial = tiene_historial_incumplimiento
-    # 2. Escribe un if/elif/else:
-    #    - si valor_alto AND tiene_historial: retorna "ALTA"
-    #    - si valor_alto OR tiene_historial: retorna "MEDIA"
-    #    - de lo contrario: retorna "BAJA"
-    pass
+    
+    valor_alto = valor > 1000000
+    tiene_historial = tiene_historial_incumplimiento
+    if valor_alto and tiene_historial:
+        return "ALTA"
+    elif valor_alto or tiene_historial:
+        return "MEDIA"
+    else:
+        return "BAJA"
 
 
 # ---------------------------------------------------------------------------
